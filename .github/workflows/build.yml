@@ -18,7 +18,7 @@ jobs:
         with:
           gradle-version: 8.7
       - name: Build debug APK
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon --quiet --console=plain --warning-mode none
       - uses: actions/upload-artifact@v4
         with:
           name: NewYearLauncher-apk
